@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 interface CurrencyData {
-  [key: string]: any; // or you can use more specific types based on the API response structure
+  [key: string]: number; // or you can use more specific types based on the API response structure
 }
 
 function useCurrencyInfo(currency: string) {
@@ -34,3 +34,6 @@ function useCurrencyInfo(currency: string) {
 }
 
 export default useCurrencyInfo;
+
+
+
