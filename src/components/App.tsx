@@ -1,9 +1,9 @@
-
 "use client";
 
 import { useState } from "react";
 import { InputBox } from "@/components";
 import useCurrencyInfo from "@/hooks/useCurrencyInfo";
+import Image from 'next/image'; // Import the Image component
 import cc1 from "../image/cc1.jpg";
 
 export default function App() {
@@ -32,13 +32,15 @@ export default function App() {
 
   return (
     <div className="w-full h-screen relative">
-      {/* Background image covering the entire screen */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${cc1.src})` }}
-      >
-        {/* Optionally add an overlay here for better contrast */}
-      </div>
+      {/* Background image using Image component */}
+      <Image
+        src={cc1}
+        alt="Currency Converter Background"
+        layout="fill" // Cover the entire parent
+        objectFit="cover" // Cover the entire area
+        quality={100} // Set quality to highest
+        className="absolute inset-0 z-0" // Set z-index to appear behind other content
+      />
 
       {/* Centered calculator */}
       <div className="flex justify-center items-center h-full">
