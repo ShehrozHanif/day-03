@@ -92,7 +92,7 @@ export default function App() {
                 currencyOptions={options}
                 onCurrencyChange={(currency) => setTo(currency)}
                 selectCrrency={to}
-                amountDisable
+                // amountDisable
                 onAmountChange={(amount) => setAmount(amount)}
               />
             </div>
